@@ -1,0 +1,3 @@
+/* Avatar is a pure SVG component — no wrapper CSS needed beyond what's
+   provided by the parent container. All animation is handled inline via
+   React state and SVG attributes in Avatar.jsx. */

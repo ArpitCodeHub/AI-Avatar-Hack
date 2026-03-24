@@ -1,0 +1,42 @@
+.spec-section {
+  padding: 7rem 3rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.spec-inner { max-width: 1320px; margin: 0 auto; }
+
+.spec-head { text-align: center; margin-bottom: 3rem; }
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.spec-card {
+  background: var(--cream-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.25rem 1.25rem 1rem;
+  cursor: pointer; transition: all 0.25s; position: relative;
+}
+.spec-card:hover {
+  border-color: var(--jade-4); transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15, 124, 107, 0.1); background: var(--surface);
+}
+
+.spec-em   { font-size: 1.8rem; margin-bottom: 0.6rem; display: block; }
+.spec-name { font-size: 0.9rem; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+.spec-desc { font-size: 0.76rem; color: var(--ink-3); }
+
+.spec-arrow {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  color: var(--ink-4); font-size: 0.9rem; transition: all 0.2s;
+}
+.spec-card:hover .spec-arrow { color: var(--jade); transform: translate(2px, -2px); }
+
+@media (max-width: 1100px) {
+  .spec-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (max-width: 640px) {
+  .spec-grid { grid-template-columns: 1fr 1fr; }
+}

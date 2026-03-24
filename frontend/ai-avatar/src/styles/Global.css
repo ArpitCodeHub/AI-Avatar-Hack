@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #F8F5F0;
+  --cream-2: #F2EDE6;
+  --cream-3: #E8E0D5;
+  --ink: #1A1510;
+  --ink-2: #3D3530;
+  --ink-3: #7A7068;
+  --ink-4: #B0A898;
+  --jade: #0F7C6B;
+  --jade-2: #0D6B5C;
+  --jade-3: #E3F0ED;
+  --jade-4: #A8CFC8;
+  --gold: #C9973A;
+  --gold-2: #F5EDD8;
+  --surface: #FFFFFF;
+  --surface-2: #FDFBF8;
+  --border: rgba(26, 21, 16, 0.08);
+  --border-2: rgba(26, 21, 16, 0.14);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --shadow-sm: 0 1px 3px rgba(26, 21, 16, 0.06), 0 4px 12px rgba(26, 21, 16, 0.04);
+  --shadow-md: 0 4px 16px rgba(26, 21, 16, 0.08), 0 12px 40px rgba(26, 21, 16, 0.06);
+}
+
+html { height: 100%; }
+
+body {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+/* Override Vite default that constrains #root to 1126px */
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100svh;
+  margin: 0 !important;
+  border: none !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+.app {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+button { font-family: var(--font-body); cursor: pointer; border: none; background: none; }
+a { text-decoration: none; }
+input { font-family: var(--font-body); }
+
+/* ── Shared utilities ── */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--jade); background: var(--jade-3);
+  padding: 6px 14px; border-radius: 100px;
+  border: 1px solid var(--jade-4); width: fit-content;
+}
+.eyebrow-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--jade); }
+
+.btn-primary {
+  padding: 0.85rem 2rem; background: var(--jade); color: white;
+  font-size: 0.9rem; font-weight: 500; border-radius: 100px;
+  display: inline-flex; align-items: center; gap: 8px; transition: all 0.25s;
+  letter-spacing: 0.01em; cursor: pointer; border: none; font-family: var(--font-body);
+}
+.btn-primary:hover {
+  background: var(--jade-2); transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 124, 107, 0.25);
+}
+
+.btn-secondary {
+  padding: 0.85rem 1.75rem;
+  border: 1px solid var(--border-2); color: var(--ink-2);
+  font-size: 0.9rem; font-weight: 400; border-radius: 100px;
+  background: var(--surface); transition: all 0.2s;
+  cursor: pointer; font-family: var(--font-body);
+}
+.btn-secondary:hover { border-color: var(--ink-4); transform: translateY(-1px); }
+
+.section-eyebrow {
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--jade); margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: var(--font-display); font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  font-weight: 400; color: var(--ink); letter-spacing: -0.02em; line-height: 1.15;
+}
+.section-desc {
+  color: var(--ink-3); font-size: 0.95rem; line-height: 1.7; max-width: 480px; margin-top: 0.6rem;
+}
